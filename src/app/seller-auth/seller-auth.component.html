@@ -1,0 +1,59 @@
+<!-- {{sellerSignUp}} -->
+<section class="seller_sign_up">
+    <div *ngIf="!isLogin" class="signUp_cover">
+        <div class="signUp_heading">
+           <h1> Seller Sign Up</h1>
+        </div>
+        <div class="signUpForm">
+            <div class="signUpInputFields">
+                <form  #sellerSignUp="ngForm" class="example-form" (ngSubmit)="formSubmit(sellerSignUp.value)"> 
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Name</mat-label>
+                        <input type="text" name="name" matInput placeholder="Ex. satish rajput" ngModel >
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Password</mat-label>
+                        <input type="password" name="password" matInput ngModel >
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" name="email" matInput placeholder="Ex. pat@example.com" ngModel >
+                    </mat-form-field>
+
+                    <button type="submit" class="example-full-width bgIndigo" >Primary</button>
+                    <a class="switch" (click)="openLogin()" >Already have an account? Login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- login -->
+    <div  *ngIf="isLogin" class="signUp_cover">
+        <p class="error">{{isError}}</p>
+        <div class="signUp_heading">
+           <h1> Seller Login</h1>
+        </div>
+        <div class="signUpForm">
+            <div class="signUpInputFields">
+                <form  #sellerLogin="ngForm" class="example-form" (ngSubmit)="formLogin(sellerLogin.value)"> 
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" name="email" matInput placeholder="Ex. pat@example.com" ngModel >
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Password</mat-label>
+                        <input type="password" name="password" matInput ngModel >
+                    </mat-form-field>
+
+                    <button type="submit" class="example-full-width bgIndigo" >Submit</button>
+                    <a class="switch" (click)="openSignUp()">Don't have an account? Please Sign-Up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

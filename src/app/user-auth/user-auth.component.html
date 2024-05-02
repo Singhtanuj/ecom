@@ -1,0 +1,75 @@
+<section class="seller_sign_up">
+   
+    <!-- User Sign Up -->
+    <div *ngIf="isUserSignup" class="signUp_cover">
+        <p class="text-green-500 ">{{userSignUpMsg}}</p>
+        <div class="signUp_heading">
+           <h1> User Sign Up</h1>
+        </div>
+        <div class="signUpForm">
+            <div class="signUpInputFields">
+                <form  #userSignUp="ngForm" class="example-form"  (ngSubmit)="signUp(userSignUp.value)"> 
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Name</mat-label>
+                        <input #userName="ngModel" type="text" name="name" matInput placeholder="Ex. satish rajput" minlength="5" maxlength="20" ngModel required >
+                        <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="userName.errors?.['minlength']">User name should have min 5 chars</mat-error>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="userName.dirty && userName.errors?.['required']">Please provide the product name</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" name="email" matInput placeholder="Ex. pat@example.com" ngModel  >
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input  type="password" name="password" matInput ngModel  >
+                    </mat-form-field>
+
+                    <button [disabled]="userSignUp.invalid" type="submit" class="example-full-width bgIndigo" >Sign Up</button>
+                    <a (click)="openLogin()" class="switch"  >Already have an account? Login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <!-- User Login -->
+        <div *ngIf="!isUserSignup" class="signUp_cover">
+            <p class="text-red-500 ">{{errMsg}}</p>
+            <div class="signUp_heading">
+               <h1> User Login</h1>
+            </div>
+            <div class="signUpForm">
+                <div class="signUpInputFields">
+                    <form  #userLogin="ngForm" class="example-form"  (ngSubmit)="login(userLogin.value)"> 
+    
+                        <!-- <mat-form-field class="example-full-width">
+                            <mat-label>Name</mat-label>
+                            <input #userName="ngModel" type="text" name="name" matInput placeholder="Ex. satish rajput" minlength="5" maxlength="20" ngModel required >
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="userName.errors?.['minlength']">User name should have min 5 chars</mat-error>
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="userName.dirty && userName.errors?.['required']">Please provide the product name</mat-error>
+                        </mat-form-field> -->
+    
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <input #email="ngModel" type="email" name="email" matInput placeholder="Ex. pat@example.com" required email minlength="4" ngModel  >
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="email.invalid && email.touched && email.errors?.['minlength']">Invalid email address</mat-error>
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="email.dirty && email.errors?.['required']">Please provide the email address</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Password</mat-label>
+                            <input #password="ngModel" type="password" name="password" matInput required minlength="2" maxlength="20" ngModel  >
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="password.errors?.['minlength, maxlength'] && password.touched">User name should have min 5 chars</mat-error>
+                            <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="password.dirty && password.errors?.['required']">Please provide the password</mat-error>
+                        </mat-form-field>
+    
+                        <button [disabled]="userLogin.invalid" type="submit" class="example-full-width bgIndigo" >Login</button>
+                        <a (click)="openSignUp()" class="switch"  > Don't have an account? Sign up</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</section>

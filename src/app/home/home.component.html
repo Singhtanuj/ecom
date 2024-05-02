@@ -1,0 +1,40 @@
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let items of popularProdList">
+    <ng-template carouselSlide id="items.id">
+      <a routerLink="/product-details/{{items.id}}"><img src="{{items.image}}" title="{{items.name}}"></a>
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
+
+<div class="wrapper p-4 bg-pink-50">
+  <h1 class="text-lg mb-4 font-extrabold">Popular Products</h1>
+  <div class="product_wrapper  flex flex-wrap w-100 " >
+
+
+    <div class="product" *ngFor="let trendy of trendyProducts">
+
+      <div class="product_cover bg-slate-50 border-solid border-2 border-slate-300 shadow-lg mb-4 mr-4">
+        <div class="product_img">
+          <a routerLink="/product-details/{{trendy.id}}"><img src="{{trendy.image}}" alt=""></a>
+        </div>
+        <div class="desc">
+          <div class="product_name text-lg mb-2">{{trendy.name}}</div>
+          <div class="product_price">Price - {{trendy.price}}</div>
+          <div class="product_category">Category - {{trendy.category}}</div>
+          <div class="product_category">Colour - {{trendy.color}}</div>
+        </div>
+        <div class="ctaBtn flex flex-column justify-between px-2">
+          <a routerLink="/product-details/{{trendy.id}}"> <button class="bg-yellow-600 text-yellow-200 px-1.5 mb-1 px-2 w-20 py-1 rounded w-100"><span
+              class="text-xs">View Details</span> &nbsp;<fa-icon [icon]="shoppingInfo"></fa-icon></button> </a>
+
+          <button class="bg-green-800 text-green-200 px-1.5 mb-1 px-2 w-20 py-1 rounded w-100"><span class="text-xs">Add
+              to Cart</span> &nbsp;<fa-icon [icon]="shopping"></fa-icon></button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

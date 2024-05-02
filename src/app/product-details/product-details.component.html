@@ -1,0 +1,43 @@
+<div class="container search_wrapper py-4" *ngIf="product">
+    <h1>{{product.name | uppercase}} </h1>
+    <div class="product_cover flex items-top border-b border-slate-200 w-3/5 mb-2 py-2">
+        <div class="img_section border">
+            <a><img src="{{product.image}}" alt="product.name"></a>
+        </div>
+        <div class="details_cover flex flex-column justify-between">
+            <div class="img_detail_section ml-10 px-2">
+                <div class="prod_Name text-3xl mb-3 cursor-pointer">{{product.name |titlecase}}</div>
+                <div class="prod_Price text-xl decoration-slate-100/30 mb-1">Price - {{product.price}}</div>
+                <div class="prod_Category text-xl decoration-slate-100/30 mb-1">Category - {{product.category |
+                    titlecase}}</div>
+                <div class="prod_Color text-xl decoration-slate-100/30 mb-1 flex items-center"> <span>Color - </span>
+                    &nbsp; <h5 class="w-5 h-5 rounded-full border-slate-300 border-2 mb-0"
+                        [style.backgroundColor]="product.color"> </h5>
+                </div>
+            </div>
+            <div class="actionBTN flex ">
+                <button *ngIf="!removeCart" type="submit" class=" ml-10 bg-yellow-600 text-yellow-200 w-28 min-w-fit py-1 rounded" (click)="addToCart()"> <fa-icon
+                        [icon]="shoppingBaskit"></fa-icon> Add to Cart </button>
+                <button *ngIf="removeCart" type="submit" class=" ml-10 bg-yellow-600 text-yellow-200 w-28 min-w-fit py-1 rounded" (click)="removeToCart(product.id)"> <fa-icon
+                        [icon]="shoppingBaskit"></fa-icon> Remove Cart </button>
+                <button type="submit" class=" ml-10 bg-green-600 text-green-200 w-28 min-w-fit py-1 rounded"><fa-icon
+                        [icon]="shoppingBag"></fa-icon> Buy Now
+                </button>
+            </div>
+
+            <div class="incre_dcre_prod ml-10 mt-3 flex items-center">
+                <button type="submit" class="min" (click)="handleProduct('minus')">
+                    <fa-icon  class="text-2xl cursor-pointer"  [icon]="minus"></fa-icon> 
+                </button>
+                <input class="w-10 text-center border-2 border-slate-300 mx-2" type="text" value="{{productQuantity}}">
+                <button type="submit" class="plus" (click)="handleProduct('plus')">
+                    <fa-icon class="text-2xl cursor-pointer"  [icon]="plus"></fa-icon>
+                </button>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

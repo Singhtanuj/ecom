@@ -1,0 +1,33 @@
+.wrapper{
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+}
+.product{
+    // border: 1px solid;
+    min-width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.product:last-child{
+    margin-right: 0px;
+}
+.product_cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #545454;
+    font-weight: 600;
+}
+.product_cover .product_img img{
+    width: 200px;
+    height: 200px;
+}
+.product_cover .desc{
+    padding: 10px;
+}
+
+.product_name, .product_price, .product_category{
+    display: flex;
+    justify-content: space-between;
+}

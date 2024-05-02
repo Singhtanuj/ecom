@@ -1,0 +1,146 @@
+{
+  "seller": [
+    {
+      "name": "Satish Rajput",
+      "paasword": "abc@123",
+      "email": "satish@seller.com",
+      "id": 1
+    },
+    {
+      "name": "rahul",
+      "password": "rahul@123",
+      "email": "rahul@rahul.com",
+      "id": 2
+    },
+    {
+      "name": "arvind ",
+      "password": "arvind@123",
+      "email": "arvind@arvind.com",
+      "id": 3
+    },
+    {
+      "name": "amol",
+      "password": "amol@123",
+      "email": "amol@amol.com",
+      "id": 4
+    },
+    {
+      "name": "Ashok Rajpur",
+      "password": "ashok@123",
+      "email": "ashok@ashok.com",
+      "id": 5
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 6
+    },
+    {
+      "name": "sarla devi",
+      "password": "sarla@123",
+      "email": "sarla@sarla.com",
+      "id": 7
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "nokia",
+      "price": "25000",
+      "color": "black",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1690705229380-a32a8eb5017d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 3
+    },
+    {
+      "name": "iPhone",
+      "price": "70000",
+      "color": "black",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 4
+    },
+    {
+      "name": "OnePlus 10 pro",
+      "price": "76000",
+      "color": "Black",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1690705229380-a32a8eb5017d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 5
+    },
+    {
+      "name": "Oppo 9 pro",
+      "price": "25000",
+      "color": "gray",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 6
+    },
+    {
+      "name": "Vivo 10",
+      "price": "20000",
+      "color": "White",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 7
+    },
+    {
+      "name": "Realme",
+      "price": "15000",
+      "color": "gray",
+      "category": "mobiles",
+      "image": "https://images.unsplash.com/photo-1690705229380-a32a8eb5017d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "id": 8
+    }
+  ],
+  "user": [
+    {
+      "userName": "sahil",
+      "email": "sahil@sahil.com",
+      "password": "sahil@123",
+      "id": 1
+    },
+    {
+      "name": "amol",
+      "password": "amol@123",
+      "email": "amol@amol.com",
+      "id": 2
+    },
+    {
+      "name": "Ashok Rajpur",
+      "password": "ashok@123",
+      "email": "arvind@arvind.com",
+      "id": 3
+    },
+    {
+      "name": "amol",
+      "password": "123",
+      "email": "amol@amol.com",
+      "id": 4
+    },
+    {
+      "name": "arvind ",
+      "password": "123",
+      "email": "arvind@arvind.com",
+      "id": 5
+    },
+    {
+      "name": "Tanuj Singh",
+      "password": "abc@123",
+      "email": "tanuj.singh021091@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Ashok Rajpur",
+      "email": "rahul@rahul.com",
+      "password": "123",
+      "id": 7
+    }
+  ]
+}

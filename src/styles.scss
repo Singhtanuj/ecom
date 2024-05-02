@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {padding:0; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ul{
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+h1{
+    margin-bottom: 0 !important;
+}
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .bgIndigo{
+    background: indigo;
+    color: pink;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .seller_sign_up{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+.seller_sign_up .signUp_cover{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.seller_sign_up .signUp_cover .signUp_heading {
+    background: indigo;
+    padding: 12px 10px;
+}
+.seller_sign_up .signUp_cover .signUp_heading h1{
+    font-size: 2rem;
+    color: pink;
+    font-weight: 500;
+}
+.seller_sign_up .signUp_cover .signUpForm{
+    margin-top: 30px;
+}
+
+.switch{
+    font-size: 12px;
+    text-align: right;
+    color: #363636;
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.success_msg{
+    color: green;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.error{
+    color: red;
+    font-weight: 600;
+}
+
+thead tr th{
+    background: indigo !important;
+    color: pink !important;
+}
+
+thead, tbody, tfoot, tr, td, th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    width: 20%;
+    word-break: break-all;    
+    border: 1px solid;
+}
+
+img{
+    width: 64px;
+    height: 64px;
+}
+
+button:disabled,
+button[disabled]{
+    background: #8e68aa;
+}
+
+.mat-mdc-form-field-hint-wrapper, .mat-mdc-form-field-error-wrapper{
+    padding: 0 !important;
+}
+
+.owl-carousel .owl-item img{
+   min-height: calc(100vh - 66px) !important;
+}
+
+.mat-typography h1{
+    font-weight: 600;
+}

@@ -1,0 +1,66 @@
+<!-- {{addProduct.pristine | json}} -->
+<section class="seller_sign_up">
+    <div class="signUp_cover">
+        <p class="success_msg">{{updateMsg}}</p>
+        <div class="signUp_heading">
+            <h1> Update Product Details</h1>
+        </div>
+
+        <div class="signUpForm">
+            <div class="signUpInputFields">
+                <form #updateProd="ngForm" class="example-form" (ngSubmit)="updateProdDetails(updateProd.value)">
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Product Name</mat-label>
+                        <input #prodName="ngModel" type="text" name="name" matInput placeholder="Enter Product Name"
+                            minlength="5" maxlength="20" ngModel="{{prodData?.name}}" required autocomplete="off">
+                        <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="prodName.errors?.['minlength']">Product
+                            name should be min 5 characters</mat-error>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5"
+                            *ngIf="prodName.dirty && prodName.errors?.['required']">Please provide the product
+                            name</mat-error>
+
+                    </mat-form-field>
+
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Product Price</mat-label>
+                        <input #prodPrice="ngModel" type="text" name="price" matInput placeholder="Enter Product Price"
+                            minlength="4" maxlength="10" ngModel="{{prodData?.price}}" required>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5"
+                            *ngIf="prodPrice.errors?.['minlength']">Product price should be min 4 characters</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Product Color</mat-label>
+                        <input #prodColor="ngModel" type="text" name="color" matInput placeholder="Enter Product Color"
+                            minlength="2" maxlength="20" ngModel="{{prodData?.color}}" required>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5"
+                            *ngIf="prodColor.errors?.['minlength']">Product price should be min 2 characters</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Product Category</mat-label>
+                        <input #prodCate="ngModel" type="text" name="category" matInput
+                            placeholder="Enter Product Category" minlength="4" maxlength="20"
+                            ngModel="{{prodData?.category}}" required>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5" *ngIf="prodCate.errors?.['minlength']">Product
+                            price should be min 4 characters</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Product Image</mat-label>
+                        <input type="text" name="image" matInput placeholder="Enter Product Image"
+                            ngModel="{{prodData?.image}}" required>
+                        <mat-error class="bg-red-300 text-red-800 px-1.5"
+                            *ngIf="prodPrice.errors?.['minlength']">Product price should be min 4 characters</mat-error>
+                    </mat-form-field>
+
+                    <button [disabled]="updateProd.invalid" type="submit" 
+                        class="example-full-width bgIndigo">Update</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
